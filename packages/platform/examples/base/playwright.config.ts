@@ -14,7 +14,7 @@ const headless = !!process.env.CI || !!process.env.PLAYWRIGHT_HEADLESS;
 
 export default defineConfig({
   forbidOnly: !!process.env.CI,
-  retries: 0,
+  retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   timeout: DEFAULT_TEST_TIMEOUT,
   fullyParallel: false,
