@@ -12,6 +12,7 @@ node_modules
 # testing
 coverage
 /test-results/
+/approxima-report/
 **/playwright/videos
 **/playwright/screenshots
 **/playwright/artifacts

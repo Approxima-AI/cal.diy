@@ -1,5 +1,5 @@
 import { currentsReporter } from "@currents/playwright";
-import type { Frame, PlaywrightTestConfig } from "@approxima/test";
+import type { ApproximaOptions, Frame, PlaywrightTestConfig } from "@approxima/test";
 import { devices, expect } from "@approxima/test";
 import dotEnv from "dotenv";
 import * as os from "node:os";
@@ -92,7 +92,7 @@ const DEFAULT_CHROMIUM: NonNullable<PlaywrightTestConfig["projects"]>[number]["u
   },
 };
 
-const config: PlaywrightTestConfig = {
+const config: PlaywrightTestConfig<ApproximaOptions> = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   // While debugging it should be focussed mode
@@ -105,6 +105,7 @@ const config: PlaywrightTestConfig = {
     ["list"],
     ["html", { outputFolder: "./test-results/reports/playwright-html-report", open: "never" }],
     ["junit", { outputFile: "./test-results/reports/results.xml" }],
+    ["@approxima/test/reporter"],
     ...(process.env.CURRENTS_RECORD_KEY ? [currentsReporter()] : []),
   ],
   outputDir: path.join(outputDir, "results"),
@@ -116,6 +117,10 @@ const config: PlaywrightTestConfig = {
     video: "on",
     screenshot: "on",
     headless,
+    approxima: {
+      enabled: true,
+      verbose: true,
+    },
   },
   projects: [
     {
