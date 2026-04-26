@@ -1,4 +1,4 @@
-import type { Page } from "@approxima/test";
+import type { Page } from "@approxima/playwright";
 
 import type { AppFlags } from "@calcom/features/flags/config";
 import { prisma } from "@calcom/prisma";

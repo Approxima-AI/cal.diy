@@ -1,4 +1,4 @@
-import { expect, type Locator, type Page } from "@approxima/test";
+import { expect, type Locator, type Page } from "@approxima/playwright";
 import path from "node:path";
 
 export async function loginAsSeededAdmin(page: Page) {

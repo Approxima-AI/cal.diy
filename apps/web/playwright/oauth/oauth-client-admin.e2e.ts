@@ -1,5 +1,5 @@
 import type { PrismaClient } from "@calcom/prisma";
-import { expect, type Page } from "@approxima/test";
+import { expect, type Page } from "@approxima/playwright";
 import { test } from "../lib/fixtures";
 import {
   closeOAuthClientDetails,

@@ -1,4 +1,4 @@
-import { expect } from "@approxima/test";
+import { expect } from "@approxima/playwright";
 import { createHash, randomBytes } from "node:crypto";
 
 import { OAUTH_ERROR_REASONS } from "@calcom/features/oauth/services/OAuthService";

@@ -1,4 +1,4 @@
-import type { Page } from "@approxima/test";
+import type { Page } from "@approxima/playwright";
 import { v4 as uuidv4 } from "uuid";
 
 import { prisma } from "@calcom/prisma";

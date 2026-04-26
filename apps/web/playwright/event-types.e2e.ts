@@ -1,7 +1,7 @@
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { randomString } from "@calcom/lib/random";
-import type { Page } from "@approxima/test";
-import { expect } from "@approxima/test";
+import type { Page } from "@approxima/playwright";
+import { expect } from "@approxima/playwright";
 
 import { test } from "./lib/fixtures";
 import {

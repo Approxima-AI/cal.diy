@@ -1,4 +1,4 @@
-import { expect } from "@approxima/test";
+import { expect } from "@approxima/playwright";
 
 import type { EventType } from "@calcom/prisma/client";
 

@@ -1,4 +1,4 @@
-import { test, expect } from "@approxima/test";
+import { test, expect } from "@approxima/playwright";
 
 test("connect calendar using the apple connect atom", async ({ page }) => {
   const appleId = process.env.ATOMS_E2E_APPLE_ID;

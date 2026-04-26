@@ -1,6 +1,6 @@
 import prisma from "@calcom/prisma";
-import type { Page } from "@approxima/test";
-import { expect } from "@approxima/test";
+import type { Page } from "@approxima/playwright";
+import { expect } from "@approxima/playwright";
 import { test } from "./lib/fixtures";
 import { IS_STRIPE_ENABLED, selectFirstAvailableTimeSlotNextMonth, submitAndWaitForResponse } from "./lib/testUtils";
 

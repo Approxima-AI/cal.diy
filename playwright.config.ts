@@ -1,6 +1,6 @@
 import { currentsReporter } from "@currents/playwright";
-import type { ApproximaOptions, Frame, PlaywrightTestConfig } from "@approxima/test";
-import { devices, expect } from "@approxima/test";
+import type { ApproximaOptions, Frame, PlaywrightTestConfig } from "@approxima/playwright";
+import { devices, expect } from "@approxima/playwright";
 import dotEnv from "dotenv";
 import * as os from "node:os";
 import * as path from "node:path";
@@ -105,7 +105,7 @@ const config: PlaywrightTestConfig<ApproximaOptions> = {
     ["list"],
     ["html", { outputFolder: "./test-results/reports/playwright-html-report", open: "never" }],
     ["junit", { outputFile: "./test-results/reports/results.xml" }],
-    ["@approxima/test/reporter"],
+    ["@approxima/playwright/reporter"],
     ...(process.env.CURRENTS_RECORD_KEY ? [currentsReporter()] : []),
   ],
   outputDir: path.join(outputDir, "results"),

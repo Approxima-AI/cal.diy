@@ -1,5 +1,5 @@
-import { expect } from "@approxima/test";
-import type { Page } from "@approxima/test";
+import { expect } from "@approxima/playwright";
+import type { Page } from "@approxima/playwright";
 import type { createUsersFixture } from "./fixtures/users";
 
 import { WEBAPP_URL } from "@calcom/lib/constants";

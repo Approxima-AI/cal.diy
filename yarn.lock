@@ -290,14 +290,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@approxima/test@npm:0.0.5":
-  version: 0.0.5
-  resolution: "@approxima/test@npm:0.0.5"
+"@approxima/playwright@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@approxima/playwright@npm:0.0.8"
   dependencies:
-    "@google/genai": "npm:^1.46.0"
+    ws: "npm:^8.18.0"
   peerDependencies:
     "@playwright/test": ">=1.50.0"
-  checksum: 10/dbb8eb5478bb88af1ab50928e862ab23a1b45fae666c03608a9eaaf3e42d6e680b76b2f89ece71f3a893b3be5626718fd729abfcdda0fe6ed703939f8d045089
+  checksum: 10/491da34a58f136f9ed462f772fc791b2b36304c1e174919988d517dcc4d67d09498c11a32174ec8caaecf9387bb626abfa6ba2996569b504168c7608e3de855e
   languageName: node
   linkType: hard
 
@@ -2147,7 +2147,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@calcom/base@workspace:packages/platform/examples/base"
   dependencies:
-    "@approxima/test": "npm:0.0.5"
+    "@approxima/playwright": "npm:0.0.8"
     "@calcom/atoms": "workspace:*"
     "@playwright/test": "npm:1.57.0"
     "@prisma/client": "npm:6.16.1"
@@ -2354,7 +2354,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@calcom/embed-core@workspace:packages/embeds/embed-core"
   dependencies:
-    "@approxima/test": "npm:0.0.5"
+    "@approxima/playwright": "npm:0.0.8"
     "@biomejs/biome": "npm:2.3.10"
     "@playwright/test": "npm:1.57.0"
     "@tailwindcss/cli": "npm:4.1.16"
@@ -2374,7 +2374,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@calcom/embed-react@workspace:packages/embeds/embed-react"
   dependencies:
-    "@approxima/test": "npm:0.0.5"
+    "@approxima/playwright": "npm:0.0.8"
     "@calcom/embed-core": "workspace:*"
     "@calcom/embed-snippet": "workspace:*"
     "@playwright/test": "npm:1.57.0"
@@ -3300,7 +3300,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@calcom/web@workspace:apps/web"
   dependencies:
-    "@approxima/test": "npm:0.0.5"
+    "@approxima/playwright": "npm:0.0.8"
     "@babel/core": "npm:7.26.10"
     "@biomejs/biome": "npm:2.3.10"
     "@boxyhq/saml-jackson": "npm:1.52.2"
@@ -5076,23 +5076,6 @@ __metadata:
   version: 4.0.0
   resolution: "@google-cloud/precise-date@npm:4.0.0"
   checksum: 10/7c897bcad6a40efd77df165fca8a57bd3fbb84e6ace848085b16233c1086c32c06258caa88b9c9aaf7d4029ded13d01b57d1b5fd808dc5722cf57626ac4a386b
-  languageName: node
-  linkType: hard
-
-"@google/genai@npm:^1.46.0":
-  version: 1.50.1
-  resolution: "@google/genai@npm:1.50.1"
-  dependencies:
-    google-auth-library: "npm:^10.3.0"
-    p-retry: "npm:^4.6.2"
-    protobufjs: "npm:^7.5.4"
-    ws: "npm:^8.18.0"
-  peerDependencies:
-    "@modelcontextprotocol/sdk": ^1.25.2
-  peerDependenciesMeta:
-    "@modelcontextprotocol/sdk":
-      optional: true
-  checksum: 10/f4a3e072bd639f76b45d91e20b1759350b064f48a504e8579f5898c9b80037fc908a66a8985fff0de348eedfef6b5fd09369777eb63fc3ee988acd6f54972575
   languageName: node
   linkType: hard
 
@@ -17011,13 +16994,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/retry@npm:0.12.0":
-  version: 0.12.0
-  resolution: "@types/retry@npm:0.12.0"
-  checksum: 10/bbd0b88f4b3eba7b7acfc55ed09c65ef6f2e1bcb4ec9b4dca82c66566934351534317d294a770a7cc6c0468d5573c5350abab6e37c65f8ef254443e1b028e44d
-  languageName: node
-  linkType: hard
-
 "@types/retry@npm:0.12.2":
   version: 0.12.2
   resolution: "@types/retry@npm:0.12.2"
@@ -19486,7 +19462,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "calcom-monorepo@workspace:."
   dependencies:
-    "@approxima/test": "npm:0.0.5"
+    "@approxima/playwright": "npm:0.0.8"
     "@biomejs/biome": "npm:2.3.10"
     "@changesets/changelog-github": "npm:0.5.1"
     "@changesets/cli": "npm:2.29.4"
@@ -24890,28 +24866,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gaxios@npm:^7.0.0, gaxios@npm:^7.1.4":
-  version: 7.1.4
-  resolution: "gaxios@npm:7.1.4"
-  dependencies:
-    extend: "npm:^3.0.2"
-    https-proxy-agent: "npm:^7.0.1"
-    node-fetch: "npm:^3.3.2"
-  checksum: 10/fbc303260ebdc77b891c51ed996a238175360cb1cfa5033ccd075ec1d8d5f0a91304df28741ed16902de6a6f5af58e3470cff131fa2f3ddccf88a4883339e243
-  languageName: node
-  linkType: hard
-
-"gcp-metadata@npm:8.1.2":
-  version: 8.1.2
-  resolution: "gcp-metadata@npm:8.1.2"
-  dependencies:
-    gaxios: "npm:^7.0.0"
-    google-logging-utils: "npm:^1.0.0"
-    json-bigint: "npm:^1.0.0"
-  checksum: 10/b3a4674067692991d1b72ddb5ff8cc24d08756fac2cf9ba4b49d92d0062724eca111ba58656fac54343bae8f0a29c8d264fb655ca2d6570e156fbdc338c787d9
-  languageName: node
-  linkType: hard
-
 "gcp-metadata@npm:^4.2.0":
   version: 4.3.1
   resolution: "gcp-metadata@npm:4.3.1"
@@ -25367,20 +25321,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-auth-library@npm:^10.3.0":
-  version: 10.6.2
-  resolution: "google-auth-library@npm:10.6.2"
-  dependencies:
-    base64-js: "npm:^1.3.0"
-    ecdsa-sig-formatter: "npm:^1.0.11"
-    gaxios: "npm:^7.1.4"
-    gcp-metadata: "npm:8.1.2"
-    google-logging-utils: "npm:1.1.3"
-    jws: "npm:^4.0.0"
-  checksum: 10/06837fc3746b657cdc199525dc91c1f1737aae0ce7d2d4f60893cb9b6e1364eb2891eb123339eaaef62f133616695214cf31995b6faf85edef4645595a8b45e8
-  languageName: node
-  linkType: hard
-
 "google-auth-library@npm:^7.0.2, google-auth-library@npm:^7.14.0":
   version: 7.14.1
   resolution: "google-auth-library@npm:7.14.1"
@@ -25395,13 +25335,6 @@ __metadata:
     jws: "npm:^4.0.0"
     lru-cache: "npm:^6.0.0"
   checksum: 10/36e99d1376b4b447e4b174259a1902f4c9819a305f8737d4e94e2ac0bd6036a816473907c5518999d0ca86a325751ab589053a57d740743bae8330413f42a2ac
-  languageName: node
-  linkType: hard
-
-"google-logging-utils@npm:1.1.3, google-logging-utils@npm:^1.0.0":
-  version: 1.1.3
-  resolution: "google-logging-utils@npm:1.1.3"
-  checksum: 10/5a6c090399545e0f1f2c92fbda316479dc5d573b2f4b54f0deb570dc31d8b254537894fd4e7c275ce7d352482e40d5857fa4b960c1b3d869584b5216dc2076e2
   languageName: node
   linkType: hard
 
@@ -33310,16 +33243,6 @@ __metadata:
     eventemitter3: "npm:^4.0.4"
     p-timeout: "npm:^3.2.0"
   checksum: 10/60fe227ffce59fbc5b1b081305b61a2f283ff145005853702b7d4d3f99a0176bd21bb126c99a962e51fe1e01cb8aa10f0488b7bbe73b5dc2e84b5cc650b8ffd2
-  languageName: node
-  linkType: hard
-
-"p-retry@npm:^4.6.2":
-  version: 4.6.2
-  resolution: "p-retry@npm:4.6.2"
-  dependencies:
-    "@types/retry": "npm:0.12.0"
-    retry: "npm:^0.13.1"
-  checksum: 10/45c270bfddaffb4a895cea16cb760dcc72bdecb6cb45fef1971fa6ea2e91ddeafddefe01e444ac73e33b1b3d5d29fb0dd18a7effb294262437221ddc03ce0f2e
   languageName: node
   linkType: hard
 

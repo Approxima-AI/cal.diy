@@ -1,4 +1,4 @@
-import { expect } from "@approxima/test";
+import { expect } from "@approxima/playwright";
 
 import { login } from "./fixtures/users";
 import { test } from "./lib/fixtures";

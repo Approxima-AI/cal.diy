@@ -1,5 +1,5 @@
-import type { Frame } from "@approxima/test";
-import { expect } from "@approxima/test";
+import type { Frame } from "@approxima/playwright";
+import { expect } from "@approxima/playwright";
 
 export async function expectHostsToBe({ hosts, frame }: { hosts: { email: string }[]; frame: Frame }) {
   try {

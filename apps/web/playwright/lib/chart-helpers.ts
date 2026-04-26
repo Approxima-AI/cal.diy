@@ -1,4 +1,4 @@
-import { expect, type Page } from "@approxima/test";
+import { expect, type Page } from "@approxima/playwright";
 
 export type ChartLoadingState = "initial" | "loading" | "loaded" | "error";
 

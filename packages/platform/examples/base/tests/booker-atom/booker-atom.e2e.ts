@@ -1,5 +1,5 @@
-import { test, expect } from "@approxima/test";
-import type { Page } from "@approxima/test";
+import { test, expect } from "@approxima/playwright";
+import type { Page } from "@approxima/playwright";
 
 async function selectOption(page: Page, optionNumber: number) {
   for (let i = 0; i < optionNumber; i++) {

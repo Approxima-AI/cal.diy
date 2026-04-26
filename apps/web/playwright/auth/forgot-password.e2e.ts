@@ -1,4 +1,4 @@
-import { expect } from "@approxima/test";
+import { expect } from "@approxima/playwright";
 import { uuid } from "short-uuid";
 
 import { verifyPassword } from "@calcom/features/auth/lib/verifyPassword";

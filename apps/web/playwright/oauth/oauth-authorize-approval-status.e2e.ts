@@ -1,7 +1,7 @@
 import { randomBytes } from "node:crypto";
 import { OAUTH_ERROR_REASONS } from "@calcom/features/oauth/services/OAuthService";
 import type { PrismaClient } from "@calcom/prisma";
-import { expect } from "@approxima/test";
+import { expect } from "@approxima/playwright";
 import { test } from "../lib/fixtures";
 
 test.describe("OAuth authorize - client approval status", () => {

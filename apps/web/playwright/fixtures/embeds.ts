@@ -1,4 +1,4 @@
-import type { Page } from "@approxima/test";
+import type { Page } from "@approxima/playwright";
 
 export const createEmbedsFixture = (page: Page) => {
   return {

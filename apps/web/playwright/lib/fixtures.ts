@@ -1,5 +1,5 @@
-import type { Page } from "@approxima/test";
-import { test as base } from "@approxima/test";
+import type { Page } from "@approxima/playwright";
+import { test as base } from "@approxima/playwright";
 // eslint-disable-next-line no-restricted-imports
 import { noop } from "lodash";
 

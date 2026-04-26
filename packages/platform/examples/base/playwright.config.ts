@@ -1,6 +1,6 @@
 import { currentsReporter } from "@currents/playwright";
-import type { ApproximaOptions } from "@approxima/test";
-import { defineConfig, devices } from "@approxima/test";
+import type { ApproximaOptions } from "@approxima/playwright";
+import { defineConfig, devices } from "@approxima/playwright";
 import dotenv from "dotenv";
 import path from "node:path"
 
@@ -22,7 +22,7 @@ export default defineConfig<ApproximaOptions>({
   reporter: [
     ["list"],
     ["html", { outputFolder: "./test-results/reports/playwright-html-report", open: "never" }],
-    ["@approxima/test/reporter"],
+    ["@approxima/playwright/reporter"],
     ...(process.env.CURRENTS_RECORD_KEY ? [currentsReporter()] : []),
   ],
   outputDir: "./test-results/results",

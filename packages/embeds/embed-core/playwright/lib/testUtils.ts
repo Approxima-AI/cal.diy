@@ -1,5 +1,5 @@
-import type { Page, Frame } from "@approxima/test";
-import { expect } from "@approxima/test";
+import type { Page, Frame } from "@approxima/playwright";
+import { expect } from "@approxima/playwright";
 
 import prisma from "@calcom/prisma";
 

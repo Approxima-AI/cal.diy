@@ -1,4 +1,4 @@
-import { expect, type Page } from "@approxima/test";
+import { expect, type Page } from "@approxima/playwright";
 
 import { createHttpServer } from "../lib/testUtils";
 
