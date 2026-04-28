@@ -119,7 +119,6 @@ const config: PlaywrightTestConfig<ApproximaOptions> = {
     headless,
     approxima: {
       enabled: true,
-      verbose: true,
       apiKey: process.env.APPROXIMA_API_KEY,
       agentServiceURL: process.env.CI ? undefined : process.env.APPROXIMA_AGENT_SERVICE_URL,
     },
