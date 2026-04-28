@@ -1,4 +1,4 @@
-import { expect } from "@playwright/test";
+import { expect } from "@approxima/playwright";
 import { test } from "./lib/fixtures";
 import { submitAndWaitForResponse } from "./lib/testUtils";
 

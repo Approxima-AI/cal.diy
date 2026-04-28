@@ -1,5 +1,5 @@
-import type { Page } from "@playwright/test";
-import { expect } from "@playwright/test";
+import type { Page } from "@approxima/playwright";
+import { expect } from "@approxima/playwright";
 
 import { test, todo } from "@calcom/web/playwright/lib/fixtures";
 import type { Fixtures } from "@calcom/web/playwright/lib/fixtures";

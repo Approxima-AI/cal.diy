@@ -1,4 +1,4 @@
-import { expect } from "@playwright/test";
+import { expect } from "@approxima/playwright";
 
 import { bookTimeSlot, selectFirstAvailableTimeSlotNextMonth } from "@calcom/web/playwright/lib/testUtils";
 

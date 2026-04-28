@@ -1,5 +1,5 @@
-import { expect } from "@playwright/test";
-import type { Page } from "@playwright/test";
+import { expect } from "@approxima/playwright";
+import type { Page } from "@approxima/playwright";
 
 import dayjs from "@calcom/dayjs";
 import { APP_CREDENTIAL_SHARING_ENABLED } from "@calcom/lib/constants";

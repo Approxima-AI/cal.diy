@@ -1,4 +1,4 @@
-import type { Page } from "@playwright/test";
+import type { Page } from "@approxima/playwright";
 
 import { prisma } from "@calcom/prisma";
 import type { Team } from "@calcom/prisma/client";

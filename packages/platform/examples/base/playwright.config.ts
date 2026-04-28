@@ -1,5 +1,6 @@
 import { currentsReporter } from "@currents/playwright";
-import { defineConfig, devices } from "@playwright/test";
+import type { ApproximaOptions } from "@approxima/playwright";
+import { defineConfig, devices } from "@approxima/playwright";
 import dotenv from "dotenv";
 import path from "node:path"
 
@@ -12,7 +13,7 @@ const DEFAULT_TEST_TIMEOUT = process.env.CI ? 60000 : 240000;
 
 const headless = !!process.env.CI || !!process.env.PLAYWRIGHT_HEADLESS;
 
-export default defineConfig({
+export default defineConfig<ApproximaOptions>({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
@@ -21,6 +22,7 @@ export default defineConfig({
   reporter: [
     ["list"],
     ["html", { outputFolder: "./test-results/reports/playwright-html-report", open: "never" }],
+    ["@approxima/playwright/reporter"],
     ...(process.env.CURRENTS_RECORD_KEY ? [currentsReporter()] : []),
   ],
   outputDir: "./test-results/results",
@@ -31,6 +33,11 @@ export default defineConfig({
     video: "on",
     screenshot: "on",
     headless,
+    approxima: {
+      enabled: true,
+      apiKey: process.env.APPROXIMA_API_KEY,
+      agentServiceURL: process.env.CI ? undefined : process.env.APPROXIMA_AGENT_SERVICE_URL,
+    },
   },
   projects: [
     {

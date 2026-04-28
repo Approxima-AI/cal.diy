@@ -1,4 +1,4 @@
-import { expect } from "@playwright/test";
+import { expect } from "@approxima/playwright";
 import { randomBytes } from "node:crypto";
 import jwt from "jsonwebtoken";
 

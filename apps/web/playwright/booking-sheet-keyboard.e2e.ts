@@ -1,6 +1,6 @@
 import { BookingStatus } from "@calcom/prisma/enums";
-import type { Page } from "@playwright/test";
-import { expect } from "@playwright/test";
+import type { Page } from "@approxima/playwright";
+import { expect } from "@approxima/playwright";
 
 import type { Fixtures } from "./lib/fixtures";
 import { test } from "./lib/fixtures";

@@ -1,5 +1,5 @@
-import type { Page } from "@playwright/test";
-import { expect } from "@playwright/test";
+import type { Page } from "@approxima/playwright";
+import { expect } from "@approxima/playwright";
 import { v4 as uuidv4 } from "uuid";
 
 import dayjs from "@calcom/dayjs";

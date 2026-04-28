@@ -1,6 +1,6 @@
 import { currentsReporter } from "@currents/playwright";
-import type { Frame, PlaywrightTestConfig } from "@playwright/test";
-import { devices, expect } from "@playwright/test";
+import type { ApproximaOptions, Frame, PlaywrightTestConfig } from "@approxima/playwright";
+import { devices, expect } from "@approxima/playwright";
 import dotEnv from "dotenv";
 import * as os from "node:os";
 import * as path from "node:path";
@@ -92,7 +92,7 @@ const DEFAULT_CHROMIUM: NonNullable<PlaywrightTestConfig["projects"]>[number]["u
   },
 };
 
-const config: PlaywrightTestConfig = {
+const config: PlaywrightTestConfig<ApproximaOptions> = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   // While debugging it should be focussed mode
@@ -105,6 +105,7 @@ const config: PlaywrightTestConfig = {
     ["list"],
     ["html", { outputFolder: "./test-results/reports/playwright-html-report", open: "never" }],
     ["junit", { outputFile: "./test-results/reports/results.xml" }],
+    ["@approxima/playwright/reporter"],
     ...(process.env.CURRENTS_RECORD_KEY ? [currentsReporter()] : []),
   ],
   outputDir: path.join(outputDir, "results"),
@@ -116,6 +117,11 @@ const config: PlaywrightTestConfig = {
     video: "on",
     screenshot: "on",
     headless,
+    approxima: {
+      enabled: true,
+      apiKey: process.env.APPROXIMA_API_KEY,
+      agentServiceURL: process.env.CI ? undefined : process.env.APPROXIMA_AGENT_SERVICE_URL,
+    },
   },
   projects: [
     {

@@ -1,4 +1,4 @@
-import { expect } from "@playwright/test";
+import { expect } from "@approxima/playwright";
 import path from "node:path";
 
 import { CAL_URL } from "@calcom/lib/constants";

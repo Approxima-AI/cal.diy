@@ -1,5 +1,5 @@
-import type { Locator, Page, PlaywrightTestArgs } from "@playwright/test";
-import { expect } from "@playwright/test";
+import type { Locator, Page, PlaywrightTestArgs } from "@approxima/playwright";
+import { expect } from "@approxima/playwright";
 import type { createUsersFixture } from "playwright/fixtures/users";
 import { uuid } from "short-uuid";
 
